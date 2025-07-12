@@ -44,10 +44,13 @@ if submitted:
     sand, cement, bricks, labour, hours = prediction
 
     # Output results
+    labour_cost = int(labour) * 1000  # ₹1000 per person
+
     st.subheader("📦 Estimated Construction Requirements")
     st.success(f"**Sand:** {sand:.2f} tons")
     st.success(f"**Cement:** {cement:.2f} tons")
     st.success(f"**Bricks:** {int(bricks)} units")
     st.success(f"**Labor Required:** {int(labour)} workers")
     st.success(f"**Total Labor Hours:** {int(hours)} hours")
+    st.success(f"**Estimated Labor Cost:** ₹{labour_cost:,}")
 
